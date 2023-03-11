@@ -1,0 +1,335 @@
+/* 20230308 SVSG TopJobPosting Style */
+body{
+	margin: 0;
+	padding: 0;
+	font-family: "DIN W01 Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 18px;
+	line-height: 1.42857143;
+	color: #282828;
+}
+/* Mobile First */
+body > header, body > footer{
+	position: fixed;
+	width: 100vw;
+	display: flex;
+	box-sizing: border-box;
+ 	justify-content: space-between;
+	transition: top .25s ease-in-out;
+}
+body > header, body > footer, .header.spacer, .footer.spacer{
+	width: 100vw;
+	height:  min(6vh, 5rem);
+	min-height: 2rem;
+	font-size: min(2.2vh, 2rem);
+}
+body > header{
+	top:0;
+	background-color: white;
+	z-index: 1;
+}
+body > footer{
+	bottom: 0;
+	color: #fff;
+	font-family: "DIN W01 Medium";
+	background-color: #7d7d7d;
+	z-index: 1;
+}
+body > header > *, body > footer > *{
+	align-self: center;
+}
+
+article{
+	display: block;
+}
+
+h1, h2{
+	font-family: "DIN W01 Medium";
+	font-weight: normal;
+	margin-block-start: .7em;
+	margin-block-end: .5em;
+}
+h1{
+	font-size: 1.7em;
+}
+h2{
+	font-size: 1.2em;
+}
+
+svg.svgsymbols{display: none}
+
+.Company.logo{
+	align-self: auto;
+	height:  min(6vh, 5rem);
+	min-height:  2rem;
+}
+.Company.logo img{
+	box-sizing: border-box;
+	height: 100%;
+	max-width: 100%;
+	object-fit: cover;
+	object-position: 0 0;
+}
+
+.Job.media{
+	/*background-color:#ee7a00;*/
+	max-height:320px;
+	margin-bottom: 1em;
+}
+
+/* responsive video embed */
+.Job.video{
+	position: relative;
+	padding-bottom: 56.25%; /* enforce 9:16 aspect ratio */
+	height: 0;
+	overflow: hidden;
+}
+.Job.video iframe{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+
+.Job.image img{
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1024px;
+	height: 30vh;
+	max-height: 315px; /*263px;*/
+	object-fit: cover; 
+	object-position: 50% 15%;
+}
+
+.Job.department{
+	font-size: 1.25em;
+}
+.Job.description ul{
+	padding-left: 1em;
+}
+/*
+.Job.description li{
+	background: none; 
+	padding-left: 1em; 
+	text-indent: -1em; 
+	margin-bottom: 0.2em;
+}
+.Job.description li:before{
+	content: "\25CF"; 
+	color: #a5c400; 
+	padding-right: .4em;
+}
+*/
+section.Job, section.Company{
+	padding: 0 .5em 0 min(2.3vh, 1.6em);
+}
+section.Job{
+	border-bottom: thin dashed;  
+}
+.Job.about{
+	border-bottom: none;
+}
+.Company.social{
+	display:flex;
+	align-items: center;
+}
+.Company.social div{
+	max-width: 66%; 
+}
+
+ul.Job.share, ul.Company.follow{
+	display:flex;
+	align-items: center;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+ul.Job.share a:hover svg, ul.Company.follow a:hover svg{
+	background-color: #bbb;
+}
+ul.Job.share svg, ul.Company.follow svg{
+	width: max(2.5vh, 1.2em);
+	max-width: 5vw;
+	height: max(2.5vh, 1.2em);
+	max-height: 5vw;
+	border-radius: 15%;
+    fill: #777;
+    padding: .1em;
+    margin-left: .5vw;
+}
+ul.Job.share svg{
+	fill: #ddd;
+}
+
+.Job.disclaimer, li.printer, .Job.apply.print{
+	display: none;
+}
+
+.Company.benefits{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding-bottom: 1em;
+}
+.Company.benefits [title] span{
+	display: none
+}
+.Company.benefits a:hover{
+	filter: brightness(0.9)
+}
+.Company.benefits [title]{
+	display: inline-block;
+	width:2.5em;
+	height:2.5em;
+	border-radius:15%;
+	margin:.1em;
+	background-color:#ee7a00;
+	background-position:center;
+	background-repeat:no-repeat
+}
+.Company.benefits [title='Cafeteria']{background-image:url(https://kssg.jobs/images/icons/cafeteria.svg)}
+.Company.benefits [title='Kindertagesstätte']{background-image:url(https://kssg.jobs/images/icons/kita.svg)}
+.Company.benefits [title='Mitarbeiterrestaurant']{background-image:url(https://kssg.jobs/images/icons/mitarbeiterrestaurant.svg)}
+.Company.benefits [title='Flexible Arbeitszeiten']{background-image:url(https://kssg.jobs/images/icons/uhr.svg)}
+.Company.benefits [title='Säuglingsbetreuung']{background-image:url(https://kssg.jobs/images/icons/baby.svg)}
+.Company.benefits [title='Personalärztlicher Dienst']{background-image:url(https://kssg.jobs/images/icons/stethoskop.svg)}
+.Company.benefits [title='Gesundheitsmanagement']{background-image:url(https://kssg.jobs/images/icons/herzhand.svg)}
+.Company.benefits [title='Fitness']{background-image:url(https://kssg.jobs/images/icons/gewichte.svg)}
+.Company.benefits [title='Personalunterkunft']{background-image:url(https://kssg.jobs/images/icons/bett.svg)}
+.Company.benefits [title='Fort- und Weiterbildung']{background-image:url(https://kssg.jobs/images/icons/zertifikat.svg)}
+.Company.benefits [title='Vegan']{background-image:url(https://kssg.jobs/images/icons/vegan.svg)}
+.Company.benefits [title='Gute Verkehrsanbindung']{background-image:url(https://kssg.jobs/images/icons/bus.svg)}
+.Company.benefits [title='Mitternachtstaxi']{background-image:url(https://kssg.jobs/images/icons/taxi.svg)}
+.Company.benefits [title='Altersvorsorge']{background-image:url(https://kssg.jobs/images/icons/schwein.svg)}
+.Company.benefits [title='Bibliothek']{background-image:url(https://kssg.jobs/images/icons/bücher.svg)}
+.Company.benefits [title='Spital-Flohmarkt']{background-image:url(https://kssg.jobs/images/icons/flohmarkt.svg)}
+.Company.benefits [title='Arbeitskleidung']{background-image:url(https://kssg.jobs/images/icons/tshirt.svg)}
+.Company.benefits [title='Rabatt']{background-image:url(https://kssg.jobs/images/icons/rabattschild.svg)}
+.Company.benefits [title='Mitarbeiteranlässe']{background-image:url(https://kssg.jobs/images/icons/cüpli.svg)}
+
+
+a {
+    color: #ee7a00;
+	text-decoration: none;
+}
+a:hover, a:active, a:focus {
+	text-decoration: underline;
+}
+
+a.Job.apply{
+	display: block;
+	color: white;
+	text-decoration: none;
+	padding: .4em 2.5em .5em .4em;
+	background-color: #ee7a00;
+	margin: .1em .5em .1em 0;
+}
+a.Job.apply::after{
+	position: absolute;
+	font-family: "icomoon";
+	content: "\e906";
+	margin: -.4em 0 0 .4em;
+	padding: .4em 0 0 .2em;
+}
+a.Job.apply:hover{
+	background-color: lightgray;
+}
+
+/* Ausblenden des Videos, SoMe, Benefits und einblenden der Aufforderung zur online Bewerbung*/
+@media print {
+	body > header, body > footer{
+		position: relative;
+	}
+	.header.spacer, .footer.spacer, .Job.video, ul.Job.share, a.Job.apply, .Company.social, .Company.benefits{
+		display: none;
+	}
+	.Job.image img{
+		max-height: 10em;
+	}
+	.Job.apply.print{
+		display: block;
+	}
+}
+
+/* Kleine Handys */
+@media screen and (max-width: 320px) {
+	h1{
+		font-size: 1.2em;
+	}
+	h2{
+		font-size: 1.1em; 
+	}
+	.Job.department{
+		font-size: 1em;
+	}
+}
+
+/* Media wird nicht mehr grösser und zentriert*/
+@media screen and (min-width: 570px) {
+	.Job.video{
+		max-width: 570px;
+		margin: 0 auto;
+	}
+	.Job.video iframe{
+		max-height:320px;
+	}
+}
+
+/* Ganzer Inhalt wird horizontal zentriert
+   Option zum Drucken und Agenturdisclaimer kommt dazu */
+@media screen and (min-width: 741px) {
+	body > header, body > footer{
+		max-width: 1024px;
+		left: 50%;
+		transform: translate(-50%, 0);
+	}
+	main{
+		max-width: 1024px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.Job.disclaimer, li.printer{
+		display: inherit;
+	}
+}
+
+/* Wrapper wird mehrspaltig */
+@media (min-width: 1024px), (orientation: landscape) and (min-width: 741px){
+	.Job.description .wrapper{
+		display: flex;
+	}
+	.wrapper section.Job:not(:first-child){
+		padding-left: 0;
+	}
+}
+
+/* Linker und rechter Rand entfernen
+@media screen and (min-width: 1048px) {
+	section.Job, section.Company{
+		padding: 0
+	}
+	.wrapper section.Job{
+		padding: 0 0.5em;
+	}
+	.wrapper section.Job:first-child{
+		padding-left: 0;
+	}
+	.wrapper section.Job:last-child{
+		padding-right: 0;
+	}
+}
+*/
+
+/* Höhenbeschränkung Kopf-/Fusszeilen */
+@media screen and (min-height: 1080px) {
+
+	body > header, body > footer, .header.spacer, .footer.spacer{
+		height:  5rem;
+		font-size: 1.5rem;
+	}
+	ul.Job.share svg, ul.Company.follow svg{
+		width: 1.2em;
+		height: 1.2em;
+	}
