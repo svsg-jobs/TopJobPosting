@@ -91,7 +91,7 @@ svg.svgsymbols{display: none}
 	height:100%;
 }
 
-.Job.image img{
+.Job.large_image img, .Job.image img{
 	display: block;
 	margin: 0 auto;
 	width: 100%;
@@ -162,7 +162,7 @@ ul.Job.share svg{
 	fill: #ddd;
 }
 
-.Job.disclaimer, li.printer, .Job.apply.print{
+.Job.large_image, .Job.disclaimer, li.printer, .Job.apply.print{
 	display: none;
 }
 
@@ -290,6 +290,12 @@ a.Job.apply:hover{
 		margin-left: auto;
 		margin-right: auto;
 	}
+	.Job.image{
+		display: none;
+	}
+	.Job.large_image{
+		display: block;
+	}
 	.Job.disclaimer, li.printer{
 		display: inherit;
 	}
@@ -299,28 +305,12 @@ a.Job.apply:hover{
 @media (min-width: 1024px), (orientation: landscape) and (min-width: 741px){
 	.Job.description .wrapper{
 		display: flex;
-	}
-	.wrapper section.Job:not(:first-child){
-		padding-left: 0;
-	}
-}
-
-/* Linker und rechter Rand entfernen
-@media screen and (min-width: 1048px) {
-	section.Job, section.Company{
-		padding: 0
+		flex-wrap: wrap;
 	}
 	.wrapper section.Job{
-		padding: 0 0.5em;
-	}
-	.wrapper section.Job:first-child{
-		padding-left: 0;
-	}
-	.wrapper section.Job:last-child{
-		padding-right: 0;
+		flex: 1 1 33%;
 	}
 }
-*/
 
 /* Höhenbeschränkung Kopf-/Fusszeilen */
 @media screen and (min-height: 1080px) {

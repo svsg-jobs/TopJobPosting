@@ -1,0 +1,7 @@
+.svg-example circle:hover {
+  fill: red;
+}
+
+.svg-example rect:hover {
+  fill: blue;
+}

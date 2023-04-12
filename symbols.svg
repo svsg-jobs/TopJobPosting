@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+	<def>
+		<symbol viewBox="0 0 20 20" id="R">
+		    <rect x="2" y="2" width="16" height="16" />
+		</symbol>
+		<symbol viewBox="0 0 20 20" id="C">    
+		    <circle cx="10" cy="10" r="8" />
+		</symbol>
+	</def>
+</svg>
