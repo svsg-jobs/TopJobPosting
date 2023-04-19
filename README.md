@@ -42,8 +42,8 @@ Bevor auf den Feed eingegangen wird, soll das Endprodukt, die Stellenanzeige, ve
 
 Die Vorlagendateien zu den Stellenanzeigen finden sich im [/docs](docs) Verzeichnis und bilden das erwartete Ergebnis ab.  
 In der Voransicht liegen beispielhafte Stellenanzeigen vor. Beachte, dass darin die weiterführenden Links wegen ihres Beispielcharkaters womöglich nicht funktionieren.
-- Beispielanzeige im [Layout SV1](https://marcel-eckstein.github.io/hello-world/LayoutSV1.html)  
-- Beispielanzeige im [Layout SV4](https://marcel-eckstein.github.io/hello-world/LayoutSV4.html)
+- Beispielanzeige im [Layout SV1](https://svsg-jobs.github.io/TopJobPosting/LayoutSV1.html)  
+- Beispielanzeige im [Layout SV4](https://svsg-jobs.github.io/TopJobPosting/LayoutSV4.html)
 
 Die Vorlagen basieren auf einer gemeinsamen Codebasis für HTML, CSS und Skripte. Es wurden Anpassungen vorgenommen, um die CI/CD-Anforderungen jeder Marke, mit angemessenem Aufwand, zu erfüllen. Das Layout der Vorlagen ist so konzipiert, dass es Mobile First und Fluid ist.  
 Der Internet Explorer wird nicht mehr unterstützt, auch nicht im Kompatibilitätsmodus von Edge.
