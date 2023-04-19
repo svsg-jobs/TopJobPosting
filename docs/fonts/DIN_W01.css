@@ -1,0 +1,19 @@
+/* Fonts gemäss Corporate Style Guide SRFT */
+@font-face {
+	font-family: 'icomoon';
+	src: url('icomoon.eot') format('embedded-opentype'), url('icomoon.ttf') format('truetype'), url('icomoon.woff') format('woff'), url('icomoon.svg') format('svg');
+	font-weight: normal;
+	font-style: normal
+}
+@font-face {
+	font-family: "DIN W01 Bold";
+	src: url("DIN_W01_Bold.eot") format("eot"), url("DIN_W01_Bold.eot.woff2") format("woff2"), url("DIN_W01_Bold.eot.woff") format("woff"), url("DIN_W01_Bold.eot.ttf") format("truetype")
+}
+@font-face {
+	font-family: "DIN W01 Medium";
+	src: url("DIN_W01_Medium.eot") format("eot"), url("DIN_W01_Medium.woff2") format("woff2"), url("DIN_W01_Medium.woff") format("woff"), url("DIN_W01_Medium.ttf") format("truetype")
+}
+@font-face {
+	font-family: "DIN W01 Light";
+	src: url("DIN_W01_Light.eot") format("eot"), url("DIN_W01_Light.woff2") format("woff2"), url("DIN_W01_Light.woff") format("woff"), url("DIN_W01_Light.ttf") format("truetype")
+}
