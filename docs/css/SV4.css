@@ -1,4 +1,4 @@
-/* 20230308 SVSG TopJobPosting Style */
+/* 20230429 SRFT TopJobPosting Style */
 body{
 	margin: 0;
 	padding: 0;
@@ -18,9 +18,15 @@ body > header, body > footer{
 }
 body > header, body > footer, .header.spacer, .footer.spacer{
 	width: 100vw;
-	height:  min(6vh, 5rem);
+	/*height:  min(6vh, 5rem);*/
 	min-height: 2rem;
 	font-size: min(2.2vh, 2rem);
+}
+body > header, .header.spacer{
+	height:  min(11vh, 5rem);
+}
+body > footer, .footer.spacer{
+	height:  min(6vh, 5rem);
 }
 body > header{
 	top:0;
@@ -59,7 +65,7 @@ svg.svgsymbols{display: none}
 
 .Company.logo{
 	align-self: auto;
-	height:  min(6vh, 5rem);
+	height:  min(11vh, 5rem);
 	min-height:  2rem;
 }
 .Company.logo img{
@@ -72,7 +78,7 @@ svg.svgsymbols{display: none}
 
 .Job.media{
 	/*background-color:#ee7a00;*/
-	max-height:320px;
+	max-height: 300px; /*320px;*/
 	margin-bottom: 1em;
 }
 
@@ -91,15 +97,15 @@ svg.svgsymbols{display: none}
 	height:100%;
 }
 
-.Job.large_image img, .Job.image img{
+.Job.image img{
 	display: block;
 	margin: 0 auto;
 	width: 100%;
-	max-width: 1024px;
-	height: 30vh;
-	max-height: 315px; /*263px;*/
-	object-fit: cover; 
-	object-position: 50% 15%;
+	max-width: 900px;
+	height: 40vw;
+	max-height: 300px; /* 263px; */
+	object-fit: cover;
+	object-position: 50% 58%;
 }
 
 .Job.department{
@@ -125,7 +131,7 @@ section.Job, section.Company{
 	padding: 0 .5em 0 min(2.3vh, 1.6em);
 }
 section.Job{
-	border-bottom: thin dashed;  
+	border-bottom: min(.2vh, 2px) dashed;  
 }
 .Job.about{
 	border-bottom: none;
@@ -290,12 +296,14 @@ a.Job.apply:hover{
 		margin-left: auto;
 		margin-right: auto;
 	}
+  /*
 	.Job.image{
 		display: none;
 	}
 	.Job.large_image{
 		display: block;
 	}
+  */
 	.Job.disclaimer, li.printer{
 		display: inherit;
 	}
