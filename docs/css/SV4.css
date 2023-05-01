@@ -1,4 +1,4 @@
-/* 20230429 SRFT TopJobPosting Style */
+/* 20230308 SVSG TopJobPosting Style */
 body{
 	margin: 0;
 	padding: 0;
@@ -77,9 +77,10 @@ svg.svgsymbols{display: none}
 }
 
 .Job.media{
-	/*background-color:#ee7a00;*/
+	/* background-color:#ee7a00; */
 	max-height: 300px; /*320px;*/
 	margin-bottom: 1em;
+  /*border: blue thin solid;*/
 }
 
 /* responsive video embed */
@@ -97,6 +98,10 @@ svg.svgsymbols{display: none}
 	height:100%;
 }
 
+.Job.image {
+  position: relative;
+}
+
 .Job.image img{
 	display: block;
 	margin: 0 auto;
@@ -108,6 +113,21 @@ svg.svgsymbols{display: none}
 	object-position: 50% 58%;
 }
 
+.Job.imageClaim{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: auto 0 2vw auto;
+  box-sizing: border-box;
+	max-width: 900px;
+  padding: 0 4vw 0 0;
+	font-family: "DIN W01 Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: min(1.5em, 4.3vw);
+  font-weight: 500;
+  color: #ee7a00;
+  text-align: right;
+  /*border: red thin solid;*/
+}
 .Job.department{
 	font-size: 1.25em;
 }
