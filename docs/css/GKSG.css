@@ -25,7 +25,7 @@ body {
 table {
   display: table;
   border-collapse: separate;
-  border-spacing: 0 -75em;
+  border-spacing: 0 .75em;
 }
 th {
   padding: .5em;
