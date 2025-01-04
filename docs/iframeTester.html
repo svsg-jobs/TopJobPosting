@@ -8,9 +8,23 @@
     <h1>Title</h1>
     <hr>
     <div style="margin: 2em; border: thin solid red;">
-      <iframe src="https://svsg-jobs.github.io/TopJobPosting/iframeGKSG.html"></iframe>
+      <iframe src="https://svsg-jobs.github.io/TopJobPosting/iframeGKSG.html" width="100%" scrolling="no" style="border:0;"></iframe>
     </div>
     <hr>
     <h1>End</h1>
+    <scrip>
+      var jobboard = function (event) {
+        var iframe = document.getElementById('jobboard');
+          if (iframe && !isNaN(event.data)) { // Check that the data is numeric
+              iframe.style.height = event.data + 'px';
+          }
+      };
+      
+      if (window.addEventListener) {
+          window.addEventListener('message', jobboard, false);
+      } else if (window.attachEvent) {
+          window.attachEvent('onmessage', jobboard);
+      }
+    </scrip>
   </body>
 </html>
