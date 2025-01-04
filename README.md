@@ -10,6 +10,7 @@ The content of these pages is aimed at implementation managers. Knowledge of HTT
 The template files for the job advertisement postings can be found in the [/docs](docs) directory. They represent the expected result.
 The previews contain sample job advertisements. Note that the external links in examples may not work due to their example nature.
 
+- iframe list in [iframeGKSG](https://svsg-jobs.github.io/TopJobPosting/iframeGKSG.html)  
 - Example ad in [Layout SV1](https://svsg-jobs.github.io/TopJobPosting/LayoutSV1.html)  
 - Example ad in [Layout SV4](https://svsg-jobs.github.io/TopJobPosting/LayoutSV4.html)
 
