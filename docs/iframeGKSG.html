@@ -70,4 +70,13 @@ tbody tr:hover td{
         <p>Senden Sie uns Ihre Spontanbewerbung oder schauen Sie einfach wieder einmal vorbei – die Stellenausschreibungen werden wöchentlich aktualisiert.</p>
         <a href="mailto:bewerbung@geriatrie-sg.ch?subject=Spontanbewerbung&body=%0ABitte%20h%C3%A4ngen%20Sie%20dieser%20Email%20Ihren%20Lebenslauf%20an.%0A">&#128231; Spontanbewerbung</a>
 </div>
+  <script>
+    function sendHeight() {
+      const height = document.body.scrollHeight; // Calculate the height of the content
+      window.parent.postMessage(height, '*'); // Send the height to the parent window
+    }    
+    // Call the function on load and whenever the content changes
+    window.onload = sendHeight;
+    window.onresize = sendHeight; // For responsive content
+  </script>
 </html>
