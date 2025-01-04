@@ -80,18 +80,17 @@
 <tr><td>Mitarbeiter/in Hauswirtschaft Spätdienst 16.00 Uhr bis 21.15 Uhr (befristet) 60% ab sofort</td><td>60%</td><td>Sofort</td></tr>
 <tr><td>Mitarbeiter/in Hauswirtschaft Spätdienst 16.00 Uhr bis 21.15 Uhr 60% ab 1. März 2025</td><td>60%</td><td>nach Vereinbarung</td></tr>
 </tbody></table>
-<div class="spontanbewerbung">
-        <h2>Spontanbewerbung</h2>
-        <p>Senden Sie uns Ihre Spontanbewerbung oder schauen Sie einfach wieder einmal vorbei – die Stellenausschreibungen werden wöchentlich aktualisiert.</p>
-        <a href="mailto:bewerbung@geriatrie-sg.ch?subject=Spontanbewerbung&body=%0ABitte%20h%C3%A4ngen%20Sie%20dieser%20Email%20Ihren%20Lebenslauf%20an.%0A">&#128231; Spontanbewerbung</a>
+<h2>Spontanbewerbung</h2>
+<p>Senden Sie uns Ihre Spontanbewerbung oder schauen Sie einfach wieder einmal vorbei – die Stellenausschreibungen werden wöchentlich aktualisiert.</p>
+<a class="button" href="mailto:bewerbung@geriatrie-sg.ch?subject=Spontanbewerbung&body=%0ABitte%20h%C3%A4ngen%20Sie%20dieser%20Email%20Ihren%20Lebenslauf%20an.%0A">&#128231; Spontanbewerbung</a>
 </div>
   <script>
     function sendHeight() {
       const height = document.body.scrollHeight; // Calculate the height of the content
       window.parent.postMessage(height, '*'); // Send the height to the parent window
     }    
-    // Call the function on load and whenever the content changes
-    window.onload = sendHeight;
-    window.onresize = sendHeight; // For responsive content
+    // Tell the parent about the window's height
+    window.onload = window.parent.postMessage(document.body.scrollHeight, '*');
+    //window.onresize = sendHeight; // For responsive content
   </script>
 </html>
