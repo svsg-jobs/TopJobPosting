@@ -8,11 +8,11 @@
     <h1>Title</h1>
     <hr>
     <div style="margin: 2em; border: thin solid red;">
-      <iframe src="https://svsg-jobs.github.io/TopJobPosting/iframeGKSG.html" width="100%" scrolling="no" style="border:0;"></iframe>
+      <iframe id="jobboard" src="https://svsg-jobs.github.io/TopJobPosting/iframeGKSG.html" width="100%" scrolling="no" style="border:0;"></iframe>
     </div>
     <hr>
     <h1>End</h1>
-    <scrip>
+    <script>
       var jobboard = function (event) {
         var iframe = document.getElementById('jobboard');
           if (iframe && !isNaN(event.data)) { // Check that the data is numeric
@@ -25,6 +25,6 @@
       } else if (window.attachEvent) {
           window.attachEvent('onmessage', jobboard);
       }
-    </scrip>
+    </script>
   </body>
 </html>
