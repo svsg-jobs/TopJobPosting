@@ -30,7 +30,7 @@ table {
 th {
   padding: .5em;
   text-align: left;
-  font-weight: 300;
+  font-weight: normal;
   border-bottom: lightgrey solid .15em;
 }
 td {
