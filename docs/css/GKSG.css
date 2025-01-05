@@ -33,6 +33,9 @@ th {
   font-weight: normal;
   border-bottom: lightgrey solid .15em;
 }
+th:nth-child(n+3), td:nth-child(n+3) {
+  display: none;
+}
 td {
   padding: .5em;
   line-height: 1em;
@@ -60,4 +63,9 @@ tbody tr:hover td, .button:hover{
   border-radius: .25em;
   color: rgb(86, 86, 86);
   transition: background-color .3s ease;
+}
+@media (min-width: 470px) {
+  th:nth-child(n+3), td:nth-child(n+3) {
+    display: table-cell;
+  }
 }
