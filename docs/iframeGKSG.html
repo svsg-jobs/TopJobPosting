@@ -25,7 +25,7 @@
      <a class="button" href="mailto:bewerbung@geriatrie-sg.ch?subject=Spontanbewerbung&body=%0ABitte%20h%C3%A4ngen%20Sie%20dieser%20Email%20Ihren%20Lebenslauf%20an.%0A">&#128231; Spontanbewerbung</a>
      <script>
        // Tell the parent window about this window's height
-       const sendHeight = () => {window.parent.postMessage(document.body.scrollHeight, 'https://geriatrie-sg.ch')};
+       const sendHeight = () => {window.parent.postMessage(document.body.scrollHeight, '*')};
        window.onload = sendHeight();
        window.onresize = sendHeight();
        window.addEventListener('message', (event) => {if ( event.data === 'request_to_sendHeight' ) sendHeight()});
