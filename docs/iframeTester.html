@@ -16,12 +16,14 @@
     <script>
       // Receive height from child
       window.addEventListener('message', (event) => {
+        console.log('event.origin' , event.origin);
         if (event.origin !== 'https://svsg-jobs.github.io') return;
         const iframe = document.getElementById('joblist');
         if ( iframe && !isNaN(event.data) ) iframe.style.height = `${event.data}px`;
       });
       // Request height from child on parent resize
       window.addEventListener('resize', () => {
+        console.log('resize');
         const iframe = document.getElementById('joblist');
         if ( iframe ) iframe.contentWindow.postMessage('request_to_sendHeight', '*');
       });
