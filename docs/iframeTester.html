@@ -23,7 +23,7 @@
       // Request height from child on parent resize
       window.addEventListener('resize', () => {
         const iframe = document.getElementById('joblist');
-        if ( iframe ) iframe.contentWindow.postMessage('getHeight', '*');
+        if ( iframe ) iframe.contentWindow.postMessage('request_to_sendHeight', '*');
       });
     </script>
   </body>
