@@ -25,7 +25,10 @@
      <a class="button" href="mailto:bewerbung@geriatrie-sg.ch?subject=Spontanbewerbung&body=%0ABitte%20h%C3%A4ngen%20Sie%20dieser%20Email%20Ihren%20Lebenslauf%20an.%0A">&#128231; Spontanbewerbung</a>
      <script>
        // Tell the parent window about this window's height
-       window.onload = window.parent.postMessage(document.body.scrollHeight, '*');
+       function sendHeight() {window.parent.postMessage(document.body.scrollHeight, 'https://svsg-jobs.github.io')}
+       window.onload = sendHeight();
+       window.onresize = sendHeight();
+       window.addEventListener('message', (event) => if ( event.data === 'getHeight' ) sendHeight());
        // Make whole tr clickable
        document.querySelectorAll("tbody tr").forEach(tr => tr.addEventListener("click", e => e.target.closest("a") || tr.querySelector("td:first-child a")?.click()));
      </script>
