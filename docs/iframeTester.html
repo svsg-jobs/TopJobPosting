@@ -13,7 +13,12 @@
     <hr>
     <script>
       // Receive height from child
-      window.addEventListener('message', (event) => if ( event.origin === 'https://svsg-jobs.github.io' && !isNaN(event.data) ) {document.getElementById('joblist')?.style.height = `${event.data}px`});
+      window.addEventListener('message', (event) => {
+        if ( event.origin === 'https://svsg-jobs.github.io' && !isNaN(event.data) ) {
+          const joblist = document.getElementById('joblist');
+          if ( joblist ) joblist.style.height = `${event.data}px`;
+        }
+      });
       // On resize request height from child
       window.addEventListener('resize', () => document.getElementById('joblist')?.contentWindow.postMessage('request_to_sendHeight', 'https://geriatrie-sg.ch'));
     </script>
