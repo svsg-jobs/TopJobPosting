@@ -9,14 +9,21 @@
     <p>The iframe has a margin of 2em and a thin red border for viusalisation</p>
     <hr>
     <div style="margin: 2em; border: thin solid red;">
-      <iframe id="jobboard" src="https://svsg-jobs.github.io/TopJobPosting/iframeGKSG.html" width="100%" scrolling="no" style="border:0;"></iframe>
+      <iframe id="joblist" src="https://svsg-jobs.github.io/TopJobPosting/iframeGKSG.html" width="100%" scrolling="no" style="border:0;"></iframe>
     </div>
     <hr>
     <h1>End</h1>
     <script>
+      // Receive height from child
       window.addEventListener('message', (event) => {
-        const iframe = document.getElementById('jobboard');
+        if (event.origin !== 'https://svsg-jobs.github.io') return;
+        const iframe = document.getElementById('joblist');
         if ( iframe && !isNaN(event.data) ) iframe.style.height = `${event.data}px`;
+      });
+      // Request height from child on parent resize
+      window.addEventListener('resize', () => {
+        const iframe = document.getElementById('joblist');
+        if ( iframe ) iframe.contentWindow.postMessage('getHeight', '*');
       });
     </script>
   </body>
