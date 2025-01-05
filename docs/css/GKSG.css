@@ -43,6 +43,7 @@ td {
 a{
   color: rgb(30, 79, 45);
   text-decoration: none;
+  transition: background-color .3s ease;
 }
 tbody tr:hover td, tbody tr:hover a, .button:hover{
   color: white;
