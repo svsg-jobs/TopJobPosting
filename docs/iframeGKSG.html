@@ -28,7 +28,7 @@
        function sendHeight() {window.parent.postMessage(document.body.scrollHeight, 'https://svsg-jobs.github.io')}
        window.onload = sendHeight();
        window.onresize = sendHeight();
-       window.addEventListener('message', (event) => if ( event.data === 'getHeight' ) sendHeight());
+       window.addEventListener('message', (event) => if ( event.data === 'request_to_sendHeight' ) sendHeight());
        // Make whole tr clickable
        document.querySelectorAll("tbody tr").forEach(tr => tr.addEventListener("click", e => e.target.closest("a") || tr.querySelector("td:first-child a")?.click()));
      </script>
