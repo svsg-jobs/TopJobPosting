@@ -26,7 +26,7 @@
        // Tell the parent window about this window's height
        window.onload = window.parent.postMessage(document.body.scrollHeight, '*');
        // Make whole tr clickable
-       document.querySelectorAll("tbody tr").forEach(tr => tr.addEventListener("click", () => tr.querySelector("td:first-child a")?.click()));
+       document.querySelectorAll("tbody tr").forEach(tr => tr.addEventListener("click", e => e.target.closest("a") || tr.querySelector("td:first-child a")?.click()));
      </script>
   </body>
 </html>
