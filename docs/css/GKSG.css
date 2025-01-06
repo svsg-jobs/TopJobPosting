@@ -42,7 +42,7 @@ th:nth-child(n+3), td:nth-child(n+3) {
 }
 td {
   padding: .5em;
-  line-height: 1em;
+  line-height: 1.3em;
   vertical-align: top;
   background-color: #f4f5f5;
   transition: background-color .3s ease;
