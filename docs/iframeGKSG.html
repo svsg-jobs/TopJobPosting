@@ -1,36 +1,38 @@
 <!DOCTYPE html>
 <html>
-   <head>
-     <title>GKSG offene Stellen</title>
-     <link href="css/GKSG.css" rel="stylesheet">
-   </head>
-   <body>
-     <table>
-       <thead><tr><th>Stellentitel</th><th>Pensum</th><th>Eintritt</th></tr></thead>
-       <tbody> 
-        <tr><td><a href="https://www.ostjob.ch/job/20250103_1555/968480" target="_blank">Assistenzärztin / Assistenzarzt</a></td><td>80-100%</td><td>nach Vereinbarung</td></tr>
-        <tr><td><a href="https://www.ostjob.ch/job//" target="_blank">Unterassistentin / Unterassisten (PJ) Innere Medizin / Geriatrie</a></td><td>100%</td><td>nach Vereinbarung</td></tr>
-        <tr><td><a href="https://www.ostjob.ch/job//" target="_blank">Dipl. Logopädin / Logopäde mit EDK-Anerkennung</a></td><td>70-100%</td><td>nach Vereinbarung</td></tr>
-        <tr><td><a href="https://www.ostjob.ch/job//" target="_blank">Oberärztin / Oberarzt als Wiedereinsteiger:in im Fachbereich Geriatrie</a></td><td>70-100%</td><td>nach Vereinbarung</td></tr>
-        <tr><td><a href="https://www.ostjob.ch/job//" target="_blank">Dipl. Ergotherapeutin / Dipl. Ergotherapeut HF/FH mit SRK-Anerkennung</a></td><td>50-90%</td><td>nach Vereinbarung</td></tr>
-        <tr><td><a href="https://www.ostjob.ch/job//" target="_blank">Dipl. Physiotherapeut/in HF/FH mit SRK-Anerkennung</a></td><td>70-100%</td><td>nach Vereinbarung</td></tr>
-        <tr><td><a href="https://www.ostjob.ch/job//" target="_blank">Dipl. Pflegefachperson HF</a></td><td>50-100%</td><td>nach Vereinbarung</td></tr>
-        <tr><td><a href="https://www.ostjob.ch/job//" target="_blank">Dipl. Ernährungstherapeut/in BSc</a></td><td>40-50%</td><td>Sofort</td></tr>
-        <tr><td><a href="https://www.ostjob.ch/job//" target="_blank">Mitarbeiter/in Hauswirtschaft Spätdienst 16.00 Uhr bis 21.15 Uhr</a></td><td>60%</td><td>Sofort, befristet</td></tr>
-        <tr><td><a href="https://www.ostjob.ch/job//" target="_blank">Mitarbeiter/in Hauswirtschaft Spätdienst 16.00 Uhr bis 21.15 Uhr</a></td><td>60%</td><td>01.03.2025</td></tr>
-       </tbody>
-     </table>
-     <h2>Spontanbewerbung</h2>
-     <p>Senden Sie uns Ihre Spontanbewerbung oder schauen Sie einfach wieder einmal vorbei – die Stellenausschreibungen werden wöchentlich aktualisiert.</p>
-     <a class="button" href="mailto:bewerbung@geriatrie-sg.ch?subject=Spontanbewerbung&body=%0ABitte%20h%C3%A4ngen%20Sie%20dieser%20Email%20Ihren%20Lebenslauf%20an.%0A">&#128231; Spontanbewerbung</a>
-     <script>
-       // Tell the parent window about this window's height
-       const sendHeight = () => {window.parent.postMessage(document.body.scrollHeight, 'https://geriatrie-sg.ch')};
-       window.onload = sendHeight();
-       window.onresize = sendHeight();
-       window.addEventListener('message', (event) => {if ( event.origin === 'https://geriatrie-sg.ch' && event.data === 'request_to_sendHeight' ) sendHeight()});
-       // Make whole tr clickable
-       document.querySelectorAll("tbody tr").forEach(tr => tr.addEventListener("click", e => e.target.closest("a") || tr.querySelector("td:first-child a")?.click()));
-     </script>
-  </body>
+   <head>
+     <title>GKSG offene Stellen</title>
+     <link href="css/GKSG.css" rel="stylesheet">
+   </head>
+   <body>
+     <table>
+       <thead><tr><th>Stellentitel</th><th>Pensum</th><th>Eintritt</th></tr></thead>
+       <tbody> 
+         <tr><td><a href="https://www.ostjob.ch/job/20250103_1555/968480" target="_blank">Assistenzärztin / Assistenzarzt</a></td><td>80-100%</td><td>nach Vereinbarung</td></tr>
+         <tr><td><a href="https://www.ostjob.ch/job/20250106_0847/968611" target="_blank">Unterassistentin / Unterassisten (PJ) Innere Medizin / Geriatrie</a></td><td>100%</td><td>nach Vereinbarung</td></tr>
+         <tr><td><a href="https://www.ostjob.ch/job/20250106_0905/968621" target="_blank">Dipl. Logopädin / Logopäde mit EDK-Anerkennung</a></td><td>70-100%</td><td>nach Vereinbarung</td></tr>
+         <tr><td><a href="https://www.ostjob.ch/job/20250106_1011/968651" target="_blank">Oberärztin / Oberarzt als Wiedereinsteiger:in im Fachbereich Geriatrie</a></td><td>70-100%</td><td>nach Vereinbarung</td></tr>
+         <tr><td><a href="https://www.ostjob.ch/job/20250106_1027/968665" target="_blank">Dipl. Ergotherapeutin / Dipl. Ergotherapeut HF/FH mit SRK-Anerkennung</a></td><td>50-90%</td><td>nach Vereinbarung</td></tr>
+         <tr><td><a href="https://www.ostjob.ch/job/20250106_1034/968666" target="_blank">Dipl. Physiotherapeut/in HF/FH mit SRK-Anerkennung</a></td><td>70-100%</td><td>nach Vereinbarung</td></tr>
+         <tr><td><a href="https://www.ostjob.ch/job//" target="_blank">Dipl. Pflegefachperson HF</a></td><td>50-100%</td><td>nach Vereinbarung</td></tr>
+         <tr><td><a href="https://www.ostjob.ch/job//" target="_blank">Dipl. Ernährungstherapeut/in BSc</a></td><td>40-50%</td><td>Sofort</td></tr>
+         <tr><td><a href="https://www.ostjob.ch/job//" target="_blank">Mitarbeiter/in Hauswirtschaft Spätdienst 16.00 Uhr bis 21.15 Uhr</a></td><td>60%</td><td>Sofort, befristet</td></tr>
+         <tr><td><a href="https://www.ostjob.ch/job//" target="_blank">Mitarbeiter/in Hauswirtschaft Spätdienst 16.00 Uhr bis 21.15 Uhr</a></td><td>60%</td><td>01.03.2025</td></tr>
+
+
+       </tbody>
+     </table>
+     <h2>Spontanbewerbung</h2>
+     <p>Senden Sie uns Ihre Spontanbewerbung oder schauen Sie einfach wieder einmal vorbei – die Stellenausschreibungen werden wöchentlich aktualisiert.</p>
+     <a class="button" href="mailto:bewerbung@geriatrie-sg.ch?subject=Spontanbewerbung&body=%0ABitte%20h%C3%A4ngen%20Sie%20dieser%20Email%20Ihren%20Lebenslauf%20an.%0A">&#128231; Spontanbewerbung</a>
+     <script>
+       // Tell the parent window about this window's height
+       const sendHeight = () => {window.parent.postMessage(document.body.scrollHeight, 'https://geriatrie-sg.ch')};
+       window.onload = sendHeight();
+       window.onresize = sendHeight();
+       window.addEventListener('message', (event) => {if ( event.origin === 'https://geriatrie-sg.ch' && event.data === 'request_to_sendHeight' ) sendHeight()});
+       // Make whole tr clickable
+       document.querySelectorAll("tbody tr").forEach(tr => tr.addEventListener("click", e => e.target.closest("a") || tr.querySelector("td:first-child a")?.click()));
+     </script>
+  </body>
 </html>
