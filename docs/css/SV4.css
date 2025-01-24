@@ -1,11 +1,13 @@
-/* 20240805 SVSG TopJobPosting Style */
+/* 20250124 HOCH TopJobPosting Style */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans');
+
 body {
 	margin: 0;
 	padding: 0;
-	font-family: 'DIN W01 Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: 'Plus Jakarta Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: 18px;
-	line-height: 1.42857143;
-	color: #282828;
+	line-height: 32.4px;
+	color: #15141A;
 }
 
 /* Mobile First */
@@ -24,9 +26,8 @@ body>footer,
 .header.spacer,
 .footer.spacer {
 	width: 100vw;
-	/*height:  min(6vh, 5rem);*/
 	min-height: 2rem;
-	font-size: min(2.2vh, 2rem);
+	font-size: min(2vh, 1.2rem);
 }
 
 body>header,
@@ -36,7 +37,8 @@ body>header,
 
 body>footer,
 .footer.spacer {
-	height: min(6vh, 5rem);
+	height: min(6.5vh, 5rem);
+	padding-bottom: .25em;
 }
 
 body>header {
@@ -47,9 +49,7 @@ body>header {
 
 body>footer {
 	bottom: 0;
-	color: #fff;
-	font-family: 'DIN W01 Medium';
-	background-color: #7d7d7d;
+	background-color: #f4f5f5;
 	z-index: 1;
 }
 
@@ -64,14 +64,15 @@ article {
 
 h1,
 h2 {
-	font-family: 'DIN W01 Medium';
 	font-weight: normal;
 	margin-block-start: 0.7em;
 	margin-block-end: 0.5em;
+	hyphens: auto;
 }
 
 h1 {
 	font-size: 1.7em;
+	font-weight: 800;
 }
 
 h2 {
@@ -97,11 +98,8 @@ svg.svgsymbols {
 }
 
 .Job.media {
-	/* background-color:#ee7a00; */
 	max-height: 300px;
-	/*320px;*/
 	margin-bottom: 1em;
-	/*border: blue thin solid;*/
 }
 
 /* responsive video embed */
@@ -132,7 +130,6 @@ svg.svgsymbols {
 	max-width: 900px;
 	height: 40vw;
 	max-height: 300px;
-	/* 263px; */
 	object-fit: cover;
 	object-position: 50% 58%;
 }
@@ -145,12 +142,10 @@ svg.svgsymbols {
 	box-sizing: border-box;
 	max-width: 900px;
 	padding: 0 4vw 0 0;
-	font-family: 'DIN W01 Medium', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: min(1.5em, 4.3vw);
 	font-weight: 500;
 	color: #ee7a00;
 	text-align: right;
-	/*border: red thin solid;*/
 }
 
 .Job.department {
@@ -161,29 +156,17 @@ svg.svgsymbols {
 	padding-left: 1em;
 }
 
-/*
-.Job.description li{
-	background: none; 
-	padding-left: 1em; 
-	text-indent: -1em; 
-	margin-bottom: 0.2em;
-}
-.Job.description li:before{
-	content: "\25CF"; 
-	color: #a5c400; 
-	padding-right: .4em;
-}
-*/
 section.Job,
 section.Company {
 	padding: 0 0.5em 0 min(2.3vh, 1.6em);
 }
 
 section.Job {
-	border-bottom: min(0.2vh, 2px) dashed;
+	border-bottom: 1px solid rgba(0, 0, 0, .1);
+	;
 }
 
-.Job.about, .Job.disclaimer {
+.Job.about {
 	border-bottom: none;
 }
 
@@ -199,31 +182,35 @@ section.Job {
 ul.Job.share,
 ul.Company.follow {
 	display: flex;
+	gap: .1em;
 	align-items: center;
 	list-style: none;
-	margin: 0;
+	margin: 0 0 0 0.1em;
 	padding: 0;
 }
 
-ul.Job.share a:hover svg,
-ul.Company.follow a:hover svg {
-	background-color: #bbb;
+ul.Job.share a,
+ul.Company.follow a {
+	display: flex;
+	width: 1.8em;
+	height: 1.8em;
+	border: 2px #adcb2d solid;
+	border-radius: 1.5em;
+}
+
+ul.Job.share a:hover,
+ul.Company.follow a:hover {
+	background-color: lightgray;
 }
 
 ul.Job.share svg,
 ul.Company.follow svg {
-	width: max(2.5vh, 1.2em);
+	width: max(2vh, 1.2em);
 	max-width: 5vw;
-	height: max(2.5vh, 1.2em);
+	height: max(2vh, 1.2em);
 	max-height: 5vw;
-	border-radius: 15%;
 	fill: #777;
-	padding: 0.1em;
-	margin-left: 0.5vw;
-}
-
-ul.Job.share svg {
-	fill: #ddd;
+	margin: auto;
 }
 
 .Job.large_image,
@@ -245,9 +232,9 @@ li.printer,
 	display: none;
 }
 
-					 
-					
- 
+.Company.benefits a {
+	position: relative;
+}
 
 .Company.benefits a:hover {
 	filter: brightness(0.9);
@@ -259,90 +246,89 @@ li.printer,
 	height: 2.5em;
 	border-radius: 15%;
 	margin: 0.1em;
-	background-color: #ee7a00;
+	background-color: #adcb2d;
 	background-position: center;
 	background-repeat: no-repeat;
 }
 
 .Company.benefits [title='Cafeteria'] {
-	background-image: url('https://kssg.jobs/images/icons/cafeteria.svg')
+	background-image: url('https://hoch.jobs/images/icons/cafeteria.svg');
 }
 
 .Company.benefits [title='Kindertagesstätte'] {
-	background-image: url('https://kssg.jobs/images/icons/kita.svg')
+	background-image: url('https://hoch.jobs/images/icons/kita.svg');
 }
 
 .Company.benefits [title='Mitarbeiterrestaurant'] {
-	background-image: url('https://kssg.jobs/images/icons/mitarbeiterrestaurant.svg')
+	background-image: url('https://hoch.jobs/images/icons/mitarbeiterrestaurant.svg');
 }
 
 .Company.benefits [title='Flexible Arbeitszeiten'] {
-	background-image: url('https://kssg.jobs/images/icons/uhr.svg')
+	background-image: url('https://hoch.jobs/images/icons/uhr.svg');
 }
 
 .Company.benefits [title='Säuglingsbetreuung'] {
-	background-image: url('https://kssg.jobs/images/icons/baby.svg')
+	background-image: url('https://hoch.jobs/images/icons/baby.svg');
 }
 
 .Company.benefits [title='Personalärztlicher Dienst'] {
-	background-image: url('https://kssg.jobs/images/icons/stethoskop.svg')
+	background-image: url('https://hoch.jobs/images/icons/stethoskop.svg');
 }
 
 .Company.benefits [title='Gesundheitsmanagement'] {
-	background-image: url('https://kssg.jobs/images/icons/herzhand.svg')
+	background-image: url('https://hoch.jobs/images/icons/herzhand.svg');
 }
 
 .Company.benefits [title='Fitness'] {
-	background-image: url('https://kssg.jobs/images/icons/gewichte.svg')
+	background-image: url('https://hoch.jobs/images/icons/gewichte.svg');
 }
 
 .Company.benefits [title='Personalunterkunft'] {
-	background-image: url('https://kssg.jobs/images/icons/bett.svg')
+	background-image: url('https://hoch.jobs/images/icons/bett.svg');
 }
 
 .Company.benefits [title='Fort- und Weiterbildung'] {
-	background-image: url('https://kssg.jobs/images/icons/zertifikat.svg')
+	background-image: url('https://hoch.jobs/images/icons/zertifikat.svg');
 }
 
 .Company.benefits [title='Vegan'] {
-	background-image: url('https://kssg.jobs/images/icons/vegan.svg')
+	background-image: url('https://hoch.jobs/images/icons/vegan.svg');
 }
 
 .Company.benefits [title='Gute Verkehrsanbindung'] {
-	background-image: url('https://kssg.jobs/images/icons/bus.svg')
+	background-image: url('https://hoch.jobs/images/icons/bus.svg');
 }
 
 .Company.benefits [title='Mitternachtstaxi'] {
-	background-image: url('https://kssg.jobs/images/icons/taxi.svg')
+	background-image: url('https://hoch.jobs/images/icons/taxi.svg');
 }
 
 .Company.benefits [title='Altersvorsorge'] {
-	background-image: url('https://kssg.jobs/images/icons/schwein.svg')
+	background-image: url('https://hoch.jobs/images/icons/schwein.svg');
 }
 
 .Company.benefits [title='Bibliothek'] {
-	background-image: url('https://kssg.jobs/images/icons/bücher.svg')
+	background-image: url('https://hoch.jobs/images/icons/bücher.svg');
 }
 
 .Company.benefits [title='Spital-Flohmarkt'] {
-	background-image: url('https://kssg.jobs/images/icons/flohmarkt.svg')
+	background-image: url('https://hoch.jobs/images/icons/flohmarkt.svg');
 }
 
 .Company.benefits [title='Arbeitskleidung'] {
-	background-image: url('https://kssg.jobs/images/icons/tshirt.svg')
+	background-image: url('https://hoch.jobs/images/icons/tshirt.svg');
 }
 
 .Company.benefits [title='Rabatt'] {
-	background-image: url('https://kssg.jobs/images/icons/rabattschild.svg')
+	background-image: url('https://hoch.jobs/images/icons/rabattschild.svg');
 }
 
 .Company.benefits [title='Mitarbeiteranlässe'] {
-	background-image: url('https://kssg.jobs/images/icons/cüpli.svg')
+	background-image: url('https://hoch.jobs/images/icons/cüpli.svg');
 }
 
-
 a {
-	color: #ee7a00;
+	color: #2b3840;
 	text-decoration: none;
 }
 
@@ -354,31 +340,23 @@ a:focus {
 
 a.Job.apply {
 	display: block;
-	color: white;
 	text-decoration: none;
-	padding: 0.4em 2.5em 0.5em 0.4em;
-	background-color: #ee7a00;
-	margin: 0.1em 0.5em 0.1em 0;
-}
-
-a.Job.apply::after {
-	position: absolute;
-	font-family: 'icomoon';
-	content: '\e906';
-	margin: -0.4em 0 0 0.4em;
-	padding: 0.4em 0 0 0.2em;
+	padding: 0.3em .5em;
+	border: 2px #adcb2d solid;
+	border-radius: 1.5em;
+	margin: 0.1em 0.5em 0.1em 0.1em;
 }
 
 a.Job.apply:hover {
 	background-color: lightgray;
 }
 
-		  
-			 
-		   
-				  
-					
- 
+.task div,
+.profile div,
+.offer div,
+.application div {
+	margin-bottom: 1em;
+}
 
 /* Ausblenden des Videos, SoMe, Benefits und einblenden der Aufforderung zur online Bewerbung*/
 @media print {
@@ -451,14 +429,6 @@ a.Job.apply:hover {
 		margin-right: auto;
 	}
 
-	/*
-	.Job.image{
-		display: none;
-	}
-	.Job.large_image{
-		display: block;
-	}
-  */
 	.Job.disclaimer,
 	li.printer {
 		display: inherit;
@@ -494,4 +464,4 @@ a.Job.apply:hover {
 		width: 1.2em;
 		height: 1.2em;
 	}
-} 
+}
